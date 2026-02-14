@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // bagas ganteng banget
   submitPassword.addEventListener("click", function () {
-    if (passwordInput.value.toLowerCase() === "test") {
+    if (passwordInput.value.toLowerCase() === "bagas ganteng banget") {
       passwordModal.style.opacity = "0";
       setTimeout(() => {
         passwordModal.style.display = "none";
