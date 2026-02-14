@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future memories Anita & Bagas</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Password Modal -->
+    <div class="password-modal" id="passwordModal">
+      <div class="password-content">
+        <h2>Masukan Kata Rahasia</h2>
+        <input
+          type="password"
+          class="password-input"
+          id="passwordInput"
+          placeholder="Masukan text..."
+        />
+        <button class="submit-btn" id="submitPassword">Enter</button>
+      </div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+      <h1 class="welcome-message">Welcome my love, enjoy your stay</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="mainContent" style="display: none">
+      <div class="tabs">
+        <button class="tab active" data-tab="love-letter">
+          <span>❤️</span> Love Letter
+        </button>
+        <button class="tab" data-tab="music"><span>🎵</span> Music</button>
+        <button class="tab" data-tab="notes"><span>📝</span> Notes</button>
+        <button class="tab" data-tab="gallery"><span>🌷</span> Gallery</button>
+      </div>
+
+      <div class="content-area">
+        <!-- Love Letter Tab -->
+        <div class="tab-content active" id="love-letter">
+          <h2>My Dearest 💕</h2>
+          <div class="letter" id="loveLetter">
+            <div class="letter-header">
+              <h3>A Letter For You</h3>
+              <span>👇 Click to open</span>
+            </div>
+            <div class="letter-content">
+              <div class="letter-scrol">
+                <p>My Boo,</p>
+                <p>
+                  Hai Nit 😊 gak nyangka ya, udah selama ini kita kenal walaupun
+                  cuma lewat layar. Web ini aku bikin khusus buat kamu em...
+                  semacam tempat kecil buat naro hal-hal yang pengin banget aku
+                  sampaikan, yang kadang susah diucap langsung. Semoga tiap kata
+                  di sini bisa nyampe rasa yang sebenarnya. 💫
+                </p>
+                <p>
+                  Ini bukan pesan valentine, ini bukan pesan ucapan ulang tahun
+                  tapi cuman pesan yang lewat sesaat aja dan bisa kamu akses
+                  kapanpun dan dimanapun selagi masih ada koneksi antara kita,
+                  nantinya di web ini akan aku jadikan dokumentasi sepihak saja
+                  apapun itu - pesan, foto, lagu, mungkin bisa video juga.
+                </p>
+                <br /><br />
+                <hr />
+                <br /><br />
+                <p>
+                  bismillahirrahmanirrahim, Semangat yaa nit kerja nya. inget
+                  kamu anak pertama. walau adik adik kamu cowo semua tapi kmu jg
+                  harus jadi cohtoh yg baik, doa yang terbaik buat diri kamu
+                  sendiri agar dimudahkan di dunia sama di akhirat nanti. and
+                  jangan lupa tetep harus manut sama orang tua yaa 💕
+                </p>
+                <p>Bismilah kamu yang terakhir buat "ku" 💕,</p>
+                <p>bagas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Music Tab -->
+        <div class="tab-content" id="music">
+          <h2>My favorite song list for you</h2>
+
+          <div
+            class="song"
+            data-audio="audio/Nadhif Basalamah - kota ini tak sama tanpamu (Official Lyric Video).mp3"
+          >
+            <div class="song-left">
+              <div class="song-icon spin-target">🎵</div>
+              <div class="song-info">
+                <h4>Kota Ini Tak Sama Tanpamu</h4>
+                <p>by Nadhif Basalamah</p>
+              </div>
+            </div>
+            <button class="play-btn">▶</button>
+          </div>
+
+          <div
+            class="song"
+            data-audio="audio/yung kai - blue (official music video).mp3"
+          >
+            <div class="song-left">
+              <div class="song-icon spin-target">🎵</div>
+              <div class="song-info">
+                <h4>Blue</h4>
+                <p>by Yung Kai</p>
+              </div>
+            </div>
+            <button class="play-btn">▶</button>
+          </div>
+
+          <div class="song" data-audio="audio/Jadian Yuk.mp3">
+            <div class="song-left">
+              <div class="song-icon spin-target">🎵</div>
+              <div class="song-info">
+                <h4>Jadian Yuk</h4>
+                <p>Chloe Pawapua</p>
+              </div>
+            </div>
+            <button class="play-btn">▶</button>
+          </div>
+
+          <div class="song" data-audio="audio/Sedia Aku Sebelum Hujan.mp3">
+            <div class="song-left">
+              <div class="song-icon spin-target">🎵</div>
+              <div class="song-info">
+                <h4>Sedia Aku Sebelum Hujan</h4>
+                <p>Idgitaf</p>
+              </div>
+            </div>
+            <button class="play-btn">▶</button>
+          </div>
+        </div>
+
+        <!-- Notes Tab -->
+        <div class="tab-content" id="notes">
+          <h2>Some reminders (Catatan)</h2>
+          <div class="note">
+            <p>Jaga diri baik baik</p>
+          </div>
+          <div class="note">
+            <p>Jangan rusak diri kamu sendiri</p>
+          </div>
+          <div class="note">
+            <p>Pilihlah apa yang mungkin terbaik bagi kamu sendiri</p>
+          </div>
+          <div class="note">
+            <p>Minum <b>Air Putih</b> yang cukup setiap hari</p>
+          </div>
+          <div class="note">
+            <p>Jangan lupa absensi itu penting</p>
+          </div>
+          <div class="note">
+            <p>You're mine.. always</p>
+          </div>
+        </div>
+
+        <!-- Gallery Tab -->
+        <div class="tab-content" id="gallery">
+          <h2>Flowers for you (bisa jadi galeri masa depan)</h2>
+          <div class="gallery">
+            <div class="gallery-item">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1eaad721-3375-4d97-a5fa-cbf8a87d60b8.png"
+                alt="Bouquet of delicate pink roses with soft green leaves"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/73632299-5dde-4ded-805a-88a7dcb4b5e4.png"
+                alt="Beautiful pink tulips in a glass vase with morning dew"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e9890063-b481-46f6-97a1-9fc753211e19.png"
+                alt="Fluffy pink peony flowers with lush foliage"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4bc3dffd-4971-4223-b7e4-3699d2b97bbe.png"
+                alt="Branch of pink cherry blossoms against a blue sky"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0daff3c-1751-492b-9b74-de28ac48d384.png"
+                alt="Cluster of light pink carnations with delicate petals"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/51f3ca74-2471-403f-bb99-751536acd7d9.png"
+                alt="Vibrant pink azalea flowers covering a garden bush"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative elements -->
+    <div class="heart" style="top: 10%; left: 5%">❤️</div>
+    <div class="heart" style="top: 20%; right: 10%">❤️</div>
+    <div class="heart" style="bottom: 15%; left: 15%">❤️</div>
+    <div class="teddy-bear" style="top: 30%; left: 10%">🧸</div>
+    <div class="teddy-bear" style="bottom: 10%; right: 5%">🧸</div>
+
+    <script src="mainscript.js"></script>
+  </body>
+</html>
