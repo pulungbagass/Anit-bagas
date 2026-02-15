@@ -204,12 +204,12 @@ body {
 }
 
 .letter.expanded .letter-content {
-  max-height: 520px; /* tinggi area buka */
+  max-height: 5200px; /* tinggi area buka */
 }
 
 /* area scroll DALAM surat */
 .letter-scroll {
-  height: 420px;
+  height: 4200px;
   overflow-y: auto;
   padding-right: 8px;
 }
