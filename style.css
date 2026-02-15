@@ -204,14 +204,14 @@ body {
 }
 
 .letter.expanded .letter-content {
-  max-height: 5200px; /* tinggi area buka */
+  max-height: 70vh;   /* tinggi relatif layar */
 }
 
-/* area scroll DALAM surat */
 .letter-scroll {
-  height: 4200px;
+  max-height: 60vh;   /* area scroll */
   overflow-y: auto;
   padding-right: 8px;
+  -webkit-overflow-scrolling: touch; /* penting buat mobile */
 }
 
 /* Music Tab */
