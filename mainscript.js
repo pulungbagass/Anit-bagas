@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // bagas ganteng banget
   submitPassword.addEventListener("click", function () {
-    if (passwordInput.value.toLowerCase() === "bagas ganteng banget") {
+    if (passwordInput.value.toLowerCase() === "123") {
       passwordModal.style.opacity = "0";
       setTimeout(() => {
         passwordModal.style.display = "none";
@@ -124,10 +124,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Expandable love letter
-  const loveLetter = document.getElementById("loveLetter");
-  loveLetter.addEventListener("click", function () {
-    this.classList.toggle("expanded");
+  // Expandable love letter (dynamic)
+  const loveLetters = document.querySelectorAll(".letter");
+
+  loveLetters.forEach((letter) => {
+    letter.addEventListener("click", function () {
+      this.classList.toggle("expanded");
+    });
   });
 
   // Add floating decorative elements
