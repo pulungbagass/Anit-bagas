@@ -128,8 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const loveLetters = document.querySelectorAll(".letter");
 
   loveLetters.forEach((letter) => {
-    letter.addEventListener("click", function () {
-      this.classList.toggle("expanded");
+    const header = letter.querySelector(".letter-header"); 
+    header.addEventListener("click", function () {
+      letter.classList.toggle("expanded");
     });
   });
 
