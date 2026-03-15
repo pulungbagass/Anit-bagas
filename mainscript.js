@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         passwordInput.style.borderColor = "#ffb7c5";
         passwordInput.placeholder = "Masukan Kata Kunci";
-      }, 1500);
+      }, 2000);
     }
   });
 
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < 15; i++) {
       const heart = document.createElement("div");
       heart.classList.add("heart");
-      heart.innerHTML = "❤️";
+      heart.innerHTML = "✨";
       heart.style.left = Math.random() * 100 + "%";
       heart.style.top = Math.random() * 100 + "%";
       heart.style.animationDelay = Math.random() * 5 + "s";
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < 5; i++) {
       const teddy = document.createElement("div");
       teddy.classList.add("teddy-bear");
-      teddy.innerHTML = "🧸";
+      teddy.innerHTML = "🌙";
       teddy.style.left = Math.random() * 100 + "%";
       teddy.style.top = Math.random() * 100 + "%";
       teddy.style.animationDelay = Math.random() * 5 + "s";
