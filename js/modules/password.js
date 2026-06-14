@@ -27,7 +27,7 @@ submitPassword.addEventListener("click", () => {
           welcomeScreen.style.display = "none";
           mainContent.style.display = "block";
         }, 800);
-      }, 7000); // 7000ms = 7s (hbd nya itu)
+      }, 8000); // 7000ms = 7s (hbd nya itu)
     }, 500);
   } else {
     passwordInput.value = "";
