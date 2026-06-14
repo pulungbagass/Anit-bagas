@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(135deg, #ffd1dc, #ffb7c5);
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  overflow-x: hidden;
+}

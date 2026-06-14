@@ -1,0 +1,318 @@
+.welcome-screen {
+  /* background hitam */
+  background: radial-gradient(circle, #60204b, #2d0320);
+  /* end */
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  /* background: linear-gradient(135deg, #ffd1dc, #ffb7c5); */
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 99;
+
+  transition: opacity 0.8s ease;
+}
+
+.welcome-message {
+  font-family: "Dancing Script", cursive;
+
+  font-size: 48px;
+
+  color: #d81b60;
+
+  text-align: center;
+
+  animation:
+    pulse 2s infinite,
+    float 3s ease-in-out infinite;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   BIRTHDAY SCREEN — scoped under .birthday-*
+   Aman buat digabung ke project yang lebih
+   besar, gak nyentuh body/root global.
+========================================= */
+
+.birthday-screen {
+  --birthday-bg-deep: #1b1330;
+  --birthday-bg-mid: #2c1b4d;
+  --birthday-gold: #f4c869;
+  --birthday-pink: #ff9ecb;
+  --birthday-lavender: #c9aaff;
+  --birthday-cream: #fdf6ec;
+  --birthday-muted: rgba(253, 246, 236, 0.55);
+
+  position: fixed;
+  inset: 0;
+  display: none; /* default: tersembunyi, ditampilin via JS setelah password benar */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  color: var(--birthday-cream);
+  background: radial-gradient(
+    circle at 50% 35%,
+    var(--birthday-bg-mid) 0%,
+    var(--birthday-bg-deep) 65%,
+    #120c22 100%
+  );
+  z-index: 9998;
+}
+
+.birthday-screen * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Ambient fireflies ===== */
+.birthday-fireflies {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.birthday-firefly {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  filter: blur(0.5px);
+  opacity: 0;
+  animation:
+    birthdayDrift linear infinite,
+    birthdayFlicker ease-in-out infinite;
+}
+
+@keyframes birthdayDrift {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-110vh) translateX(var(--drift-x, 40px));
+  }
+}
+
+@keyframes birthdayFlicker {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  15% {
+    opacity: var(--max-opacity, 0.6);
+  }
+  50% {
+    opacity: calc(var(--max-opacity, 0.6) * 0.5);
+  }
+  85% {
+    opacity: var(--max-opacity, 0.6);
+  }
+}
+
+/* ===== Glow halo behind content ===== */
+.birthday-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(244, 200, 105, 0.18) 0%,
+    rgba(201, 170, 255, 0.1) 45%,
+    transparent 75%
+  );
+  filter: blur(10px);
+  animation: birthdayGlowPulse 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes birthdayGlowPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+/* ===== Fireworks ===== */
+.birthday-fireworks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.birthday-firework {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  animation: birthdayExplode 1s forwards;
+}
+
+@keyframes birthdayExplode {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
+
+/* ===== Confetti (one-time, gentle) ===== */
+.birthday-confetti-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.birthday-confetti {
+  position: absolute;
+  top: -24px;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  opacity: 0.9;
+  animation: birthdayConfettiFall 3.6s ease-in forwards;
+}
+
+@keyframes birthdayConfettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(100vh) rotate(380deg);
+    opacity: 0;
+  }
+}
+
+/* ===== Main content ===== */
+.birthday-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 560px;
+}
+
+.birthday-eyebrow {
+  font-size: 13px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--birthday-muted);
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: birthdayFadeUp 0.9s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.birthday-eyebrow span {
+  color: var(--birthday-gold);
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 15px;
+}
+
+.birthday-title {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(48px, 12vw, 92px);
+  line-height: 1.05;
+  background: linear-gradient(
+    135deg,
+    var(--birthday-gold) 0%,
+    var(--birthday-pink) 50%,
+    var(--birthday-lavender) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: birthdayFadeUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.birthday-age {
+  margin-top: 26px;
+  font-size: clamp(20px, 4.5vw, 30px);
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--birthday-cream);
+  opacity: 0;
+  animation: birthdayFadeUp 0.9s ease-out forwards;
+  animation-delay: 0.95s;
+}
+
+.birthday-divider {
+  width: 60px;
+  height: 1px;
+  margin: 22px auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--birthday-gold),
+    transparent
+  );
+  opacity: 0;
+  animation: birthdayFadeIn 1s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.birthday-subtitle {
+  font-size: clamp(15px, 3vw, 18px);
+  color: var(--birthday-muted);
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: birthdayFadeUp 0.9s ease-out forwards;
+  animation-delay: 1.35s;
+}
+
+@keyframes birthdayFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes birthdayFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .birthday-screen,
+  .birthday-screen * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

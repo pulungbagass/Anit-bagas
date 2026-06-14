@@ -1,0 +1,23 @@
+{
+  "name": "bagas-anit",
+  "version": "1.0.0",
+  "description": "surprise your sweet girl with this cute website.",
+  "main": "mainscriptOld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gallery": "node js/modules/generate-gallery.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulungbagass/Anit-bagas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pulungbagass/Anit-bagas/issues"
+  },
+  "homepage": "https://github.com/pulungbagass/Anit-bagas#readme"
+  
+}

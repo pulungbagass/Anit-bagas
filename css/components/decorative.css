@@ -1,0 +1,24 @@
+.heart,
+.teddy-bear {
+  position: absolute;
+
+  z-index: -1;
+
+  opacity: 0.2;
+
+  pointer-events: none;
+}
+
+.heart {
+  color: #d81b60;
+
+  font-size: 24px;
+
+  animation: float 6s ease-in-out infinite;
+}
+
+.teddy-bear {
+  font-size: 32px;
+
+  animation: float 8s ease-in-out infinite;
+}
