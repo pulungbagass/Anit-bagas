@@ -1,4 +1,4 @@
-````md
+
 # 💖 Bagas & Anita
 
 A simple memories website built with **HTML, CSS, and Vanilla JavaScript**.
@@ -179,4 +179,4 @@ Just memories. 💖
 ---
 
 Made with ❤️ by Bagas.
-````
+
